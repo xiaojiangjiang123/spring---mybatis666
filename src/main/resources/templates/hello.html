@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+hello idea—spring-boot！！！
+<span th:text="${uname}">刘亦菲</span><br/>
+<span th:text="欢迎+${uname}">刘亦菲</span><br/>
+<span th:text="|欢迎,${uname}|">刘亦菲</span><br/>
+
+<hr>
+
+姓名：<span th:text="${us.username}"></span>
+<br/>
+密码：<span th:text="${us.password}"></span>
+
+<hr/>
+
+是否有钱：<span th:if="${menony > 1000}">富豪</span>
+
+<hr/>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>姓名</td>
+        <td>密码</td>
+    </tr>
+    <tr th:each="us : ${uslist}">
+        <td th:text="${us.id}">id</td>
+        <td th:text="${us.username}">姓名</td>
+        <td th:text="${us.password}">密码</td>
+    </tr>
+
+</table>
+
+
+<hr/>
+
+<!--日期格式-->
+<input th:value="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"/>
+</body>
+
+
+</html>
