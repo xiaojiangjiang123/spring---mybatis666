@@ -16,6 +16,7 @@ public class Usercontroller {
     @Autowired
     private Iuserservice userservice;
 
+    public  void test(){}
 
     @RequestMapping("/getById/{id}")
     public TUs gstById(@PathVariable("id") Integer id){
